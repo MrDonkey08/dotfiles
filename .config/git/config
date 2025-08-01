@@ -1,0 +1,21 @@
+[alias]
+	# https://platzi.com/comentario/594183/
+	superlog = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	idiff = diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
+[color]
+    ui = auto
+[core]
+    editor = nvim
+	excludesfile = ~/.config/git/global_ignore
+[format]
+	pretty = format:%C(bold blue)%h %C(reset yellow)%G? %C(bold green)(%ad) %C(reset default)%s %C(dim white)%an%C(auto)%d %(trailers:)
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[user]
+	name = Alan
+	email = 113253976+MrDonkey08@users.noreply.github.com

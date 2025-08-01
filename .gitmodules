@@ -1,0 +1,6 @@
+[submodule "powerlevel10k"]
+	path = powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "nvim"]
+	path = .config/nvim
+	url = https://github.com/MrDonkey08/nvim-dotfiles.git

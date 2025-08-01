@@ -1,0 +1,68 @@
+[font]
+size = 12
+offset = { x = 0, y = 2 }
+
+[font.normal]
+family = 'HackNerdFont'
+style = 'Regular'
+
+[font.bold]
+family = 'HackNerdFont'
+style = 'Bold'
+
+[font.bold_italic]
+family = 'HackNerdFont'
+style = 'Bold Italic'
+
+[font.italic]
+family = 'HackNerdFont'
+style = 'Italic'
+
+
+# Archivo: alacritty_colors.toml
+
+[colors]
+
+[colors.primary]
+background = '0x101421'
+foreground = '0xfffbf6'
+
+[colors.normal]
+black = '0x2e2e2e'
+red = '0xeb4129'
+green = '0xabe047'
+yellow = '0xf6c744'
+blue = '0x47a0f3'
+magenta = '0x7b5cb0'
+cyan = '0x64dbed'
+white = '0xe5e9f0'
+
+[colors.bright]
+black = '0x565656'
+red = '0xec5357'
+green = '0xc0e17d'
+yellow = '0xf9da6a'
+blue = '0x49a4f8'
+magenta = '0xa47de9'
+cyan = '0x99faf2'
+white = '0xffffff'
+
+[window]
+padding = { x = 20, y = 25 }
+
+[general]
+import = [
+  "~/.config/alacritty/base16-dark.toml",
+  "~/.config/alacritty/keybindings.toml",
+]
+
+[terminal]
+
+[terminal.shell]
+program = "/bin/zsh"
+args = ["-l"]
+
+[keyboard]
+bindings = [
+  { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" },
+]
