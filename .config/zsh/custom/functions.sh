@@ -22,19 +22,6 @@ function extractPorts() {
 	rm -f extractPorts.tmp
 }
 
-# Set 'man' colors
-function man() {
-	env \
-		LESS_TERMCAP_mb=$'\e[01;31m' \
-		LESS_TERMCAP_md=$'\e[01;31m' \
-		LESS_TERMCAP_me=$'\e[0m' \
-		LESS_TERMCAP_se=$'\e[0m' \
-		LESS_TERMCAP_so=$'\e[01;44;33m' \
-		LESS_TERMCAP_ue=$'\e[0m' \
-		LESS_TERMCAP_us=$'\e[01;32m' \
-		man "$@"
-}
-
 # Enhanced fzf function
 function fzf-lovely() {
 	if [[ "$1" == "h" ]]; then
@@ -55,16 +42,5 @@ function fzf-lovely() {
 			coderay {} ||
 			rougify {} ||
 			cat {}) 2> /dev/null | head -500"
-	fi
-}
-
-# Secure file deletion
-function rmk() {
-	local file="$1"
-	if [[ -f "$file" ]]; then
-		scrub -p dod "$file"
-		shred -zun 10 -v "$file"
-	else
-		echo "File not found: $file"
 	fi
 }

@@ -1,6 +1,6 @@
-## Setup fzf
-if [[ ! "$PATH" == */home/donkey/.fzf/bin* ]]; then
-	PATH="${PATH:+${PATH}:}/home/donkey/.fzf/bin"
-fi
+## Plugins
+\. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+\. /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+\. /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh
 
-eval "$(fzf --zsh)"
+[ -s "$HOME/.fzf.zsh" ] && \. "$HOME/.fzf.zsh"

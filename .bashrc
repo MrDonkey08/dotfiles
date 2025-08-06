@@ -7,11 +7,8 @@
 
 PS1='[\u@\h \W]\$ '
 
-[ -f ~/.fzf.bash ] && source "$HOME/.fzf.bash"
-
-if [ -f "$HOME/.profile" ]; then
-	. "$HOME/.profile"
-fi
+[ -s "$HOME/.fzf.bash" ] && \. "$HOME/.fzf.bash"
+[ -s "$HOME/.profile" ] && \. "$HOME/.profile"
 
 ## Aliases
 
@@ -32,5 +29,3 @@ bind "^[[F":end-of-line       # End
 bind "DEL":delete-char        # Delete
 bind "^[[1;3C":forward-word   # Alt + Right-arrow
 bind "^[[1;3D":backward-word  # Alt + Left-arrow
-bind "\C-e":forward-word      # Ctrl + e
-bind "\C-b":backward-word     # Ctrl + b
