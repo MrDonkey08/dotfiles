@@ -12,12 +12,12 @@ indent_style = space
 indent_size = 4
 
 # 2-space indentation
-[*.{css,env,htm,html,js,jsx,json,jsonc,md,mdx,sass,scss,sql,ts,tsx,toml,xml,yaml,yml}]
+[*.{css,env,htm,html,js,jsx,json,jsonc,lua,md,mdx,sass,scss,sql,ts,tsx,toml,xml,yaml,yml}]
 indent_style = space
 indent_size = 2
 
 # Tab indentation
-[Makefile,*.{bib,bash,c,cpp,fish,go,h,sh,tex,zsh}]
+[Makefile,*.{bib,bash,c,cpp,fish,go,h,sh,tex,zsh},*{profile}]
 indent_style = tab
 
 ## Windows files
