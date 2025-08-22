@@ -20,6 +20,15 @@ indent_size = 2
 [Makefile,*.{bib,bash,c,cpp,fish,go,h,sh,tex,zsh},*{profile}]
 indent_style = tab
 
+# Shell scripts
+[*.{bash,fish,sh,zsh}]
+# shell_variant      = posix
+binary_next_line   = true
+switch_case_indent = true
+space_redirects    = true
+keep_padding       = true
+function_next_line = true
+
 ## Windows files
 
 # Windows-Style newlines
