@@ -1,0 +1,10 @@
+[Unit]
+Description=Run battery notifications every 2 minutes
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=2min
+Unit=battery-threshold-notify.service
+
+[Install]
+WantedBy=timers.target

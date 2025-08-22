@@ -1,0 +1,5 @@
+[Unit]
+Description=Battery Notification Script
+
+[Service]
+ExecStart=/home/donkey/bin/systemd/battery-threshold-notify.sh
