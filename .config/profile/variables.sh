@@ -1,6 +1,6 @@
 ## PATH
-export PATH="$PATH:$HOME/Apps"
-export PATH="$PATH:$HOME/bin"
+append_path "$HOME/Apps"
+append_path "$HOME/bin"
 
 ## Editor
 export EDITOR='nvim'

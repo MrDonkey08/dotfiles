@@ -23,6 +23,14 @@ function rmk() {
 	fi
 }
 
+function bhelp() {
+	if [[ $# -eq 1 ]]; then
+		bash -c "help $1"
+	else
+		echo "Error: One argument required"
+	fi
+}
+
 # Image conversion
 function img_convert() {
 	if [[ $# -lt 3 ]]; then
