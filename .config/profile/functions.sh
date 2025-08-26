@@ -12,6 +12,23 @@ function man() {
 		man "$@"
 }
 
+icat() {
+	if [ "$TERM" = "xterm-kitty" ]; then
+		kitty +kitten icat "$@"
+	elif [ "$TERM_PROGRAM" = "WezTerm" ]; then
+		wezterm imgcat "$@"
+	elif command -v viu > /dev/null 2>&1; then
+		viu "$@"
+	elif command -v chafa > /dev/null 2>&1; then
+		chafa "$@"
+	elif command -v display > /dev/null 2>&1; then
+		display "$@"
+	else
+		printf '%s\n' "No supported image viewer found for $TERM"
+		return 1
+	fi
+}
+
 # Secure file deletion
 function rmk() {
 	local file="$1"

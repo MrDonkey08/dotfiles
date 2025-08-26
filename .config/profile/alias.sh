@@ -1,6 +1,5 @@
 # cat
 alias bat='bat --color=always'
-alias icat="kitty +kitten icat"
 
 # grep
 alias grep='grep --color=auto'
