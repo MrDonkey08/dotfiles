@@ -32,7 +32,7 @@ icat() {
 # Secure file deletion
 rmk() {
 	local file="$1"
-	if [[ -f "$file" ]]; then
+	if [ -f "$file" ]; then
 		scrub -p dod "$file"
 		shred -zun 10 -v "$file"
 	else
@@ -41,7 +41,7 @@ rmk() {
 }
 
 bhelp() {
-	if [[ $# -eq 1 ]]; then
+	if [ $# -eq 1 ]; then
 		bash -c "help $1"
 	else
 		echo "Error: One argument required"
@@ -50,7 +50,7 @@ bhelp() {
 
 # Image conversion
 img_convert() {
-	if [[ $# -lt 3 ]]; then
+	if [ $# -lt 3 ]; then
 		echo "Usage: img_convert <images> <output_extension> <quality>"
 		return 1
 	fi
@@ -60,7 +60,7 @@ img_convert() {
 	local quality=("${@: -1}")
 
 	for img in "${imgs[@]}"; do
-		if [[ -f "$img" ]]; then
+		if [ -f "$img" ]; then
 			magick "$img" -quality "$quality" "${img%.*}.$out_ext"
 		else
 			echo "Warning: File not found - $img"
@@ -70,7 +70,7 @@ img_convert() {
 
 # Image resizing
 img_resize() {
-	if [[ $# -lt 4 ]]; then
+	if [ $# -lt 4 ]; then
 		echo "Usage: img_resize <images> <width> <height> <quality>"
 		return 1
 	fi
@@ -81,7 +81,7 @@ img_resize() {
 	local quality=("${@: -1}")
 
 	for img in "${imgs[@]}"; do
-		if [[ -f "$img" ]]; then
+		if [ -f "$img" ]; then
 			magick "$img" -quality "$quality" -resize "${width}x${height}>" "$img"
 		else
 			echo "Warning: File not found - $img"
@@ -91,7 +91,7 @@ img_resize() {
 
 # Combined image conversion and resizing
 img_convert_resize() {
-	if [[ $# -lt 5 ]]; then
+	if [ $# -lt 5 ]; then
 		echo "Usage: img_convert_resize <images> <output_extension> <width> <height> <quality>"
 		return 1
 	fi
@@ -103,7 +103,7 @@ img_convert_resize() {
 	local quality=("${@: -1}")
 
 	for img in "${imgs[@]}"; do
-		if [[ -f "$img" ]]; then
+		if [ -f "$img" ]; then
 			magick "$img" -quality "$quality" -resize "${width}x${height}>" "${img%.*}.$out_ext"
 		else
 			echo "Warning: File not found - $img"
