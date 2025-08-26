@@ -1,12 +1,10 @@
 # Create directories
-function mkt()
-{
+function mkt() {
 	mkdir -p nmap content exploits scripts
 }
 
 # Extract Nmap information
-function extractPorts()
-{
+function extractPorts() {
 	local ports ip_address
 	# Extract ports and IP addresses safely
 	ports="$(grep -oP "\\d{1,5}/open" "$1" | awk -F'/' '{print $1}' | xargs | tr ' ' ',')"
@@ -25,8 +23,7 @@ function extractPorts()
 }
 
 # Enhanced fzf function
-function fzf-lovely()
-{
+function fzf-lovely() {
 	if [[ "$1" == "h" ]]; then
 		fzf -m --reverse --preview-window down:20 --preview \
 			"[[ \$(file --mime {}) =~ binary ]] &&
