@@ -1,5 +1,5 @@
 # Set code colors
-function man() {
+man() {
 	env \
 		MANWIDTH="$(tput cols)" \
 		LESS_TERMCAP_mb=$'\e[01;31m' \
@@ -30,7 +30,7 @@ icat() {
 }
 
 # Secure file deletion
-function rmk() {
+rmk() {
 	local file="$1"
 	if [[ -f "$file" ]]; then
 		scrub -p dod "$file"
@@ -40,7 +40,7 @@ function rmk() {
 	fi
 }
 
-function bhelp() {
+bhelp() {
 	if [[ $# -eq 1 ]]; then
 		bash -c "help $1"
 	else
@@ -49,7 +49,7 @@ function bhelp() {
 }
 
 # Image conversion
-function img_convert() {
+img_convert() {
 	if [[ $# -lt 3 ]]; then
 		echo "Usage: img_convert <images> <output_extension> <quality>"
 		return 1
@@ -69,7 +69,7 @@ function img_convert() {
 }
 
 # Image resizing
-function img_resize() {
+img_resize() {
 	if [[ $# -lt 4 ]]; then
 		echo "Usage: img_resize <images> <width> <height> <quality>"
 		return 1
@@ -90,7 +90,7 @@ function img_resize() {
 }
 
 # Combined image conversion and resizing
-function img_convert_resize() {
+img_convert_resize() {
 	if [[ $# -lt 5 ]]; then
 		echo "Usage: img_convert_resize <images> <output_extension> <width> <height> <quality>"
 		return 1
@@ -112,6 +112,6 @@ function img_convert_resize() {
 }
 
 # Make Git directories safe
-function gitsafe() {
+gitsafe() {
 	find . -name ".git" -type d -exec bash -c 'git config --global --add safe.directory "${0%/.git}"' {} \;
 }
