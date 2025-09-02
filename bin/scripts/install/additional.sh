@@ -4,126 +4,177 @@ sudo pacman -Syu
 
 # Android
 
-sudo pacman -S scrcpy
+sudo pacman -S --needed --noconfirm \
+	scrcpy
+
+# Benchmarks
+
+paru -S --needed --noconfirm \
+	hardinfo2
 
 # Browsers
 
-yay -S brave-bin
-sudo pacman -S firefox
-sudo pacman -S lynx
-sudo pacman -S torbrowser-launcher
+yay -S --needed --noconfirm brave-bin
+sudo pacman -S --needed --noconfirm \
+	firefox \
+	lynx \
+	torbrowser-launcher
 
 # Cibersecurity
-sudo pacman -S cupp
-sudo pacman -S holehe
-sudo pacman -S sherlock
+sudo pacman -S --needed --noconfirm \
+	cupp \
+	holehe \
+	sherlock
 
 # Cleaners
 
-sudo pacman -S bleachbit
-sudo pacman -S paccache
+sudo pacman -S --needed --noconfirm \
+	bleachbit
 
 # Converters
 
-sudo pacman -S pandoc-cli
-sudo pacman -S txt2tags
-sudo pacman -S catdoc
-sudo pacman -S md2pdf
+sudo pacman -S --needed --noconfirm \
+	pandoc-cli \
+	txt2tags \
+	catdoc
+
+paru -S --needed --noconfirm \
+	md2pdf
 
 # Compressors
 
-sudo pacman -S imagemagick
-sudo pacman -S ps2pdf
-sudo pacman -S ghostscript
+sudo pacman -S --needed --noconfirm \
+	imagemagick \
+	ghostscript
 
 # Diagrams
 
-sudo pacman -S drawio-desktop
-sudo pacman -S mermaid-cli
+sudo pacman -S --needed --noconfirm \
+	drawio-desktop \
+	mermaid-cli
+
+# Helpers
+
+# sudo pacman -S --needed --noconfirm \
+# 	tldr
+
+# `tldr` alternative written in Rust
+sudo pacman -S --needed --noconfirm \
+	tealdeer
 
 # Network
 
-sudo pacman -S wireshark-cli
+sudo pacman -S --needed --noconfirm \
+	wireshark-cli
 
 # Math
 
-sudo pacman -S bc
-sudo pacman -S speedcrunch
-sudo pacman -S geogebra
+sudo pacman -S --needed --noconfirm \
+	bc \
+	speedcrunch
+# 	 geogebra \
 
 # Metadata Tools
 
-sudo pacman -S perl-image-exiftool
+sudo pacman -S --needed --noconfirm \
+	perl-image-exiftool
 # https://bbs.archlinux.org/viewtopic.php?id=134680
 #sudo ln /usr/bin/vendor_perl/exiftool /usr/bin/exiftool
 
 # Messengers
 
-sudo pacman -S discord signal-desktop telegram-desktop
+sudo pacman -S --needed --noconfirm \
+	discord \
+	signal-desktop \
+	telegram-desktop
 
 # Media
 
-sudo pacman -S spotify-launcher
-sudo pacman -S strawberry
-sudo pacman -S vlc
-sudo pacman -S obs-studio
-sudo pacman -S flameshot
-#sudo pacman -S nvidia-settings
-sudo pacman -S thunar gvfs
+sudo pacman -S --needed --noconfirm \
+	spotify-launcher \
+	strawberry \
+	vlc \
+	obs-studio \
+	flameshot
+
+# thunar gvfs #	 nvidia-settings \
 
 ## Media Edition
 
-sudo pacman -S blender
-sudo pacman -S kdenlive
-sudo pacman -S gimp
-sudo pacman -S tenacity
+sudo pacman -S --needed --noconfirm \
+	gimp \
+	tenacity
+# 	blender \
+# 	kdenlive
 
-# Meetins
+# Meetings
 
-paru -S webex-bin
+# paru -S --needed --noconfirm webex-bin
 
 # Security
 
-sudo pacman -S keepassxc
-#sudo pacman -S ufw
-paru -S scrub
-sudo pacman -S virustotal
+sudo pacman -S --needed --noconfirm \
+	keepassxc \
+	virustotal
+#	 ufw \
+
+paru -S --needed --noconfirm \
+	scrub
 
 # Privacy
 
-sudo pacman -S veracrypt
+sudo pacman -S --needed --noconfirm \
+	veracrypt
 
 ## VPN
 
-sudo pacman -S openvpn
-sudo pacman -S torctl
+sudo pacman -S --needed --noconfirm \
+	openvpn \
+	torctl
 
 # Utility
 
-sudo pacman -S at
-sudo pacman -S fd
-sudo pacman -S htop
-sudo pacman -S iostat
-sudo pacman -S openssl
-sudo pacman -S rclone
-sudo pacman -S gparted
-sudo pacman -S qrtool
-sudo pacman -S screenkey
-sudo pacman -S sysstat
-sudo pacman -S xclip
-sudo pacman -S timeshift
-yay -S woeusb-ng
+sudo pacman -S --needed --noconfirm \
+	at \
+	fd \
+	htop \
+	openssl \
+	rclone \
+	gparted \
+	qrtool \
+	screenkey \
+	stow \
+	sysstat \
+	xclip \
+	timeshift
 
-sudo pacman -S mdcat bat lsd
-sudo pacman -S locate
-sudo pacman -S fzf
+sudo pacman -S --needed --noconfirm \
+	progress \
+	hdparm
+
+yay -S --needed --noconfirm \
+	woeusb-ng
+
+sudo pacman -S --needed --noconfirm \
+	bat \
+	lsd \
+	mdcat
+
+sudo pacman -S --needed --noconfirm \
+	locate \
+	fzf
 
 ## Extra
 
-rsudo pacman -S neofetch
-sudo pacman -S fastfetch
-sudo pacman -S lolcat cowsay
+sudo pacman -S --needed --noconfirm \
+	fastfetch \
+	lolcat \
+	cowsay
 
 # Windows Support
 
-sudo pacman -S wine
+sudo pacman -S --needed --noconfirm \
+	wine \
+	vkd3d \
+	wine-gecko \
+	wine-mono

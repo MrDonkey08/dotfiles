@@ -1,99 +1,182 @@
 #!/usr/bin/env bash
 
-sudo pacman -Syu
+sudo pacman -Syu --needed --noconfirm
 
 # Git
 
-sudo pacman -S git git-lfs
-yay -S git-open
+sudo pacman -S --needed --noconfirm \
+	git \
+	git-lfs
+
+paru -S git-open
 
 ## GitHub
 
 ### GitHub Pages
 
 #npm install --save-dev --save-exact prettier @shopify/prettier-plugin-liquid
-gem install jekyll bundler
+# gem install jekyll bundler
 
 # Languages
 
 ## Databases
 
-sudo pacman -S dbeaver
+# sudo pacman -S --needed --noconfirm \
+# 	dbeaver
 
 # Xampp
-sudo pacman -S libxcrypt-compat net-tools inetutils
+sudo pacman -S --needed --noconfirm \
+	libxcrypt-compat \
+	net-tools \
+	inetutils
+
 # Postgresql
-sudo pacman -S postgresql
+sudo pacman -S --needed --noconfirm \
+	postgresql
 
 ## Debuggers
-sudo pacman -S gdb
-sudo pacman -S strace
+sudo pacman -S --needed --noconfirm \
+	gdb \
+	strace
 
 ## Programming
 
 ### Compiled
 
 # Arduino
-sudo pacman -S arduino-cli
-sudo pacman -S arduino-ide
+sudo pacman -S --needed --noconfirm \
+	arduino-cli
+
+paru -S --needed --noconfirm \
+	arduino-ide
+
 # Assembly
-sudo pacman -S nasm
-sudo pacman -S dosbox
+sudo pacman -S --needed --noconfirm \
+	dosbox \
+	nasm
+
 # C/C++
-sudo pacman -S gcc clang
+sudo pacman -S --needed --noconfirm \
+	clang \
+	gcc
+
 # Go
-sudo pacman -S go
+sudo pacman -S --needed --noconfirm \
+	go
+
 # Java
-sudo pacman -S jdk-openjdk
+sudo pacman -S --needed --noconfirm \
+	jdk-openjdk
 # Rust
-#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+if command -v cargo >/dev/null 2>&1; then
+	rustup self update && rustup update
+else
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
 
 ### Interpreted
 
 # JS
-sudo pacman -S deno
-sudo pacman -S nodejs-lts-jod
+sudo pacman -S --needed --noconfirm \
+	deno \
+	nodejs-lts-jod
+
 # Lua
-sudo pacman -S lua
-sudo pacman -S lua51
+sudo pacman -S --needed --noconfirm \
+	lua \
+	lua51
+
 # PHP
-sudo pacman -S php
+sudo pacman -S --needed --noconfirm \
+	php \
+	composer
+
 # Python
-sudo pacman -S python python3 python-pip
+sudo pacman -S --needed --noconfirm \
+	python \
+	python3 \
+	python-pip
+
 # Python Packages
-sudo pacman -S tk python-pandas python-numpy python-sympy
-sudo pacman -S python-pytorch python-scikit-learn
-sudo pacman -S jupyterlab
+sudo pacman -S --needed --noconfirm \
+	tk \
+	python-pandas \
+	python-numpy \
+	python-sympy \
+	python-pytorch \
+	python-scikit-learn \
+	jupyterlab \
+	python-pdftotext
+
+paru -S --needed --noconfirm \
+	python-bitvector
+
 # Ruby
-sudo pacman -S ruby
+sudo pacman -S --needed --noconfirm \
+	ruby
 
 # Text Editors
 
 ## Docs
-sudo pacman -S obsidian
-sudo pacman -S texlive texlive-lang
+sudo pacman -S --needed --noconfirm \
+	obsidian
+
+sudo pacman -S --needed --noconfirm \
+	texlive \
+	texlive-langenglish \
+	texlive-langspanish
+
+# Execute to install langs interactively
+# sudo pacman -S \
+# 	texlive-lang
 
 ## IDEs
 
-sudo pacman -S nano vi vim neovim
-sudo pacman -S vscode
-yay -S codium
+### Terminal IDEs
+sudo pacman -S --needed --noconfirm \
+	nano \
+	vi \
+	vim \
+	neovim
+
+### Graphical IDEs
+# Vscode
+sudo pacman -S --needed --noconfirm \
+	code
+
+# Vscodium
+paru -S vscodium-bin
 
 ## Office Docs
 
-sudo pacman -S libreoffice
-sudo pacman -S zathura zathura-pdf-mupdf
+sudo pacman -S --needed --noconfirm \
+	libreoffice-still \
+	libreoffice-still-es \
+	libreoffice-extension-writer2latex
+
+sudo pacman -S --needed --noconfirm \
+	zathura \
+	zathura-pdf-mupdf
+
 # A office, ebook, md... reader that uses zathura
 paru -S zaread-git
 
 ## Tools
 
 ### Linters, Formatters, Parsers...
-sudo pacman -S biome
-sudo pacman -S markdownlint
-sudo pacman -S markdownlint-cli2
-sudo pacman -S markdown-toc
-sudo pacman -S prettier
-npm install -g purgecss
-sudo pacman -S tree-sitter
-sudo pacman -S tree-sitter-cli
+sudo pacman -S --needed --noconfirm \
+	biome \
+	prettier \
+	shfmt
+
+sudo npm install -g purgecss
+
+sudo pacman -S --needed --noconfirm \
+	markdownlint \
+	markdownlint-cli2 \
+	markdown-toc
+
+sudo pacman -S --needed --noconfirm \
+	tree-sitter \
+	tree-sitter-cli \
+	tree-sitter-grammars

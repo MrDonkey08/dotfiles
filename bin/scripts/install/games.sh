@@ -2,9 +2,11 @@
 
 # Clients
 
-sudo pacman -S steam
-sudo pacman -S lutris
+sudo pacman -S \
+	steam \
+	lutris
 
 # Games
 
-paru -S minecraft-launcher
+paru -S \
+	minecraft-launcher
