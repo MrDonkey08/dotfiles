@@ -1,0 +1,61 @@
+" -----------------------------
+" Indentation
+" -----------------------------
+set autoindent              " Start new lines correctly indented
+set breakindent             " Indent wrapped lines' continuations
+set cindent                 " Indent according to the C indenting rules
+set noexpandtab             " Do not expand tabs to spaces
+set showtabline=4           " Show the tabline even when just one tab is open
+set smartindent             " Indent new lines in a smart way (see autoindent)
+set smarttab                " Treat spaces as tabs in increments of shiftwidth
+set shiftwidth=4            " Indent spaces equal to tabstop
+set softtabstop=0           " Do not insert spaces when pressing tab
+set tabstop=4               " Number of columns to move when pressing <TAB>
+
+" -----------------------------
+" Wrapping
+" -----------------------------
+set linebreak               " Respect words when wrap-breaking lines
+set nowrap                  " Do not wrap text at window width
+
+" -----------------------------
+" Enumeration
+" -----------------------------
+set number                  " Show absolute line numbers
+set relativenumber          " Show numbers relative to cursor
+
+" -----------------------------
+" Highlight
+" -----------------------------
+set colorcolumn=81          " Draw column at line character limit
+set cursorline              " Highlight the cursor line
+set cursorlineopt=both      " Highlight both number and line (Vim 8.1.1511+)
+set hlsearch                " Highlight all search matches
+set incsearch               " Incrementally highlight search matches
+
+" -----------------------------
+" Styling
+" -----------------------------
+set showcmd                 " Show typed keys in normal mode
+
+" -----------------------------
+" Functionality
+" -----------------------------
+if exists("$SSH_TTY")
+    set clipboard=           " Disable clipboard sync over SSH
+else
+    set clipboard=unnamedplus " Sync with system clipboard
+endif
+
+set fixeol                  " Restore EOL at EOF if missing when writing
+set foldmethod=marker       " Folding with triple braces
+" NOTE: `foldtext=v:lua.fold_string()` is a Neovim-specific feature.
+" In Vim, you'd need to define a foldtext function:
+" set foldtext=CustomFoldText()
+
+set hidden                  " Hide inactive buffers instead of unloading them
+" set list                    " Show special characters (configure with listchars)
+set mouse=nvi               " Allow mouse everywhere except command line
+set nrformats=unsigned      " Treat numbers as unsigned with <C-A> and <C-X>
+
+set spelllang=es_mx,en_us   " Set spell languages
