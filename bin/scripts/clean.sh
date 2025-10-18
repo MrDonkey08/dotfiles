@@ -13,8 +13,8 @@ sudo journalctl --vacuum-size=100M
 sudo rm -rf /tmp/*
 
 # Clean the XDG user directories
-# rm -rf ~/.cache/*
-rm -rf ~/.local/share/Trash/*
+sudo rm -rf ~/.cache/*
+sudo rm -rf ~/.local/share/Trash/*
 
 # Remove old versions of installed packages using paccache:
 sudo paccache -r
