@@ -1,6 +1,7 @@
 ## PATH
 append_path "$HOME/Apps"
 append_path "$HOME/bin"
+append_path "$HOME/.yarn/bin"
 
 ## Editor
 export EDITOR='nvim'
