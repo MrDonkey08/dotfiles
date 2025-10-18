@@ -6,7 +6,7 @@ fi
 ## Sources
 
 # Sources all custom zsh config files
-for file in $(find "${XDG_CONFIG_HOME:-$HOME.config}/zsh/custom/" -xtype f | sort); do
+for file in $(find "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/custom/" -xtype f | sort); do
 	\. "$file";
 done
 
