@@ -93,9 +93,15 @@ sudo pacman -S --needed --noconfirm \
 sudo pacman -S --needed --noconfirm \
 	spotify-launcher \
 	strawberry \
-	vlc \
 	obs-studio \
 	flameshot
+
+sudo pacman -S --needed --noconfirm \
+	vlc \
+	vlc-plugin-base \
+	vlc-plugin-x264 \
+	vlc-plugin-x265 \
+	vlc-plugin-ffmpeg
 
 # thunar gvfs #	 nvidia-settings \
 
