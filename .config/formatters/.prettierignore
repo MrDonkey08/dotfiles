@@ -14,18 +14,6 @@
 # - Template generator: https://www.toptal.com/developers/gitignore
 #   - Templates: https://github.com/toptal/gitignore/tree/master
 
-## Proteus ##
-*.workspace
-
-## Boole Deusto ##
-*.sco.txt
-
-## WinCpl ##
-*.abs
-*.lst
-*.pla
-*.sim
-
 ### IDEs: Team IDEs and text editors ###
 
 ## VisualStudioCode ##
@@ -49,7 +37,7 @@
 
 # End of https://www.toptal.com/developers/gitignore/api/vim
 
-### Obsidian ###
+## Obsidian ##
 .obsidian/
 *.trash
 
@@ -273,12 +261,12 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/backup
 
-### PERFORMANCE: To reduce unnecesary file checking (e.g, binaries) ###
+#### PERFORMANCE: To reduce unnecesary file checking (e.g,, binaries) ####
 
 ## Compiled programs ##
 **/bin/
 
-## Executable ##
+## Executables ##
 *.app
 #*.bat
 *.cgi
@@ -287,12 +275,17 @@ $RECYCLE.BIN/
 *.gadget
 *.jar
 *.pif
+*.pyc
 *.vb
 *.wsf
 
+# Prevents massive di
+**/.yarn/releases/**
+**/.yarn/plugins/**
+
 # End of https://www.toptal.com/developers/gitignore/api/executable
 
-## Extensionless Executables ##
+### Extensionless Executables ###
 # WARNING: Ignoring extensionless files can lead to issues—many important files
 # like Dockerfile, Makefile, README, etc., have no extension.
 # Uncomment below to ignore all extensionless files (often used for ignoring
@@ -301,9 +294,71 @@ $RECYCLE.BIN/
 #!/**/
 #!*.*
 
-## Archives & Compressed ##
+### Media ###
 
-# Archives #
+# Graphics
+*.ai
+*.bmp
+*.eps
+*.gif
+*.gifv
+*.ico
+*.jng
+*.jp2
+*.jpg
+*.jpeg
+*.jpx
+*.jxr
+*.pdf
+*.png
+*.psb
+*.psd
+*.svg
+*.svgz
+*.tif
+*.tiff
+*.wbmp
+*.webp
+
+# Audio
+*.kar
+*.m4a
+*.mid
+*.midi
+*.mp3
+*.ogg
+*.ra
+
+# Video
+*.3gpp
+*.3gp
+*.as
+*.asf
+*.asx
+*.avi
+*.fla
+*.flv
+*.m4v
+*.mng
+*.mov
+*.mp4
+*.mpeg
+*.mpg
+*.ogv
+*.swc
+*.swf
+*.webm
+
+# Fonts
+*.ttf
+*.eot
+*.otf
+*.woff
+*.woff2
+
+### Archives and Compression Files ###
+
+# Archives
 *.pkg
 *.iso
 *.sfark
@@ -326,7 +381,7 @@ $RECYCLE.BIN/
 # Ruby Package
 *.gem
 
-# Compressed #
+# Compression
 *.7z
 *.bz2
 *.F
@@ -342,7 +397,7 @@ $RECYCLE.BIN/
 *.infl
 *.??_
 
-# Compressed Archives #
+# Compressed Archives
 *.rar
 *.tgz
 *.zip
@@ -350,31 +405,27 @@ $RECYCLE.BIN/
 *.?Q?
 *.?Z?
 
-## Office ##
-#
-# Docs
+### Microsoft Office ###
 *.doc
 *.docx
 *.xls
 *.xlsx
 *.ppt
 *.pptx
-# *.pdf
 
-# LibreOffice locks
-.~lock.*#
-
-# Microsoft Office
+# Temporary
 *.tmp
-
-## Backup
-Backup of *.doc*
-*.xlk
-*.~vsd*
-
-## Temporary
 ~$*.doc*
 ~$*.xls*
 ~$*.ppt*
 # Visio autosave temporary files
 *.~vsd*
+
+# Backup
+Backup of *.doc*
+*.xlk
+*.~vsd*
+
+### LibreOffice ###
+# LibreOffice locks
+.~lock.*#
