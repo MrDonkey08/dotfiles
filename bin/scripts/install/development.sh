@@ -39,9 +39,9 @@ sudo pacman -S --needed --noconfirm \
 	virtualbox \
 	virtualbox-host-modules-lts
 
-paru -S --needed --noconfirm \
-	vmware-keymaps \
-	vmware-workstation
+# paru -S --needed --noconfirm \
+# 	vmware-keymaps \
+# 	vmware-workstation
 
 # sudo systemctl enable vmware-networks-configuration.service
 # sudo systemctl enable vmware-usbarbitrator.service
@@ -189,7 +189,7 @@ sudo pacman -S --needed --noconfirm \
 	zathura-pdf-mupdf
 
 # A office, ebook, md... reader that uses zathura
-paru -S zaread-git
+# paru -S zaread-git
 
 ## Tools
 

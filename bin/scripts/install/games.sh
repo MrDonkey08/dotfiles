@@ -11,5 +11,5 @@ sudo pacman -S --needed --noconfirm \
 
 # Games
 
-paru -S \
-	minecraft-launcher
+# paru -S \
+# 	minecraft-launcher

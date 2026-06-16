@@ -9,12 +9,12 @@ sudo pacman -S --needed --noconfirm \
 
 # Benchmarks
 
-paru -S --needed --noconfirm \
-	hardinfo2
+# paru -S --needed --noconfirm \
+# 	hardinfo2
 
 # Browsers
 
-paru -S --needed --noconfirm brave-bin
+# paru -S --needed --noconfirm brave-bin
 
 sudo pacman -S --needed --noconfirm \
 	firefox \
@@ -39,8 +39,8 @@ sudo pacman -S --needed --noconfirm \
 	txt2tags \
 	catdoc
 
-paru -S --needed --noconfirm \
-	md2pdf
+# paru -S --needed --noconfirm \
+# 	md2pdf
 
 # Compressors
 
@@ -128,16 +128,16 @@ sudo pacman -S --needed --noconfirm \
 	virustotal
 #	 ufw \
 
-paru -S --needed --noconfirm \
-	scrub
+# paru -S --needed --noconfirm \
+# 	scrub
 
 # Privacy
 
 sudo pacman -S --needed --noconfirm \
 	veracrypt
 
-paru -S --needed --noconfirm \
-	cryptomator
+# paru -S --needed --noconfirm \
+# 	cryptomator
 
 ## VPN
 
@@ -165,15 +165,15 @@ sudo pacman -S --needed --noconfirm \
 	progress \
 	hdparm
 
-paru -S --needed --noconfirm \
-	woeusb-ng
+# paru -S --needed --noconfirm \
+# 	woeusb-ng
 
 sudo pacman -S --needed --noconfirm \
 	bat \
 	lsd
 
-paru -S --needed --noconfirm \
-	mdcat
+# paru -S --needed --noconfirm \
+# 	mdcat
 
 sudo pacman -S --needed --noconfirm \
 	locate \

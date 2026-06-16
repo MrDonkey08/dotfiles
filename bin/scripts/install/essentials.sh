@@ -296,8 +296,8 @@ sudo pacman -S --needed --noconfirm \
 	p7zip unrar zip unzip \
 	gzip pbzip2 bzip3
 
-paru -S --needed --noconfirm \
-	plzip
+# paru -S --needed --noconfirm \
+# 	plzip
 
 ## File Systems
 
@@ -317,8 +317,8 @@ sudo pacman -S --needed --noconfirm \
 	ttf-liberation \
 	ttf-nerd-fonts-symbols-mono
 
-paru -S --needed --noconfirm \
-	ttf-font-awesome-4
+# paru -S --needed --noconfirm \
+# 	ttf-font-awesome-4
 
 sudo pacman -S --needed --noconfirm \
 	ttf-material-icons \
