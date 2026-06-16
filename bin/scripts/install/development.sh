@@ -8,7 +8,7 @@ sudo pacman -S --needed --noconfirm \
 	git \
 	git-lfs
 
-paru -S git-open
+# paru -S git-open
 
 ## GitHub
 
@@ -16,6 +16,38 @@ paru -S git-open
 
 #npm install --save-dev --save-exact prettier @shopify/prettier-plugin-liquid
 # gem install jekyll bundler
+
+# Contenedorization and Virtualization
+
+## Contenedorization
+
+# Docker
+sudo pacman -S --needed --noconfirm \
+	docker \
+	docker-compose
+
+# See https://wiki.archlinux.org/title/Docker
+# sudo systemctl enable --now docker.service
+sudo systemctl enable --now docker.socket
+
+# Kubernetes
+
+## Virtualization
+
+sudo pacman -S --needed --noconfirm \
+	qemu-full
+
+sudo pacman -S --needed --noconfirm \
+	virtualbox \
+	virtualbox-host-modules-lts
+
+paru -S --needed --noconfirm \
+	vmware-keymaps \
+	vmware-workstation
+
+# sudo systemctl enable vmware-networks-configuration.service
+# sudo systemctl enable vmware-usbarbitrator.service
+# sudo modprobe -a vmw_vmci vmmon
 
 # Languages
 
@@ -47,8 +79,8 @@ sudo pacman -S --needed --noconfirm \
 sudo pacman -S --needed --noconfirm \
 	arduino-cli
 
-paru -S --needed --noconfirm \
-	arduino-ide
+# paru -S --needed --noconfirm \
+# 	arduino-ide
 
 # Assembly
 sudo pacman -S --needed --noconfirm \
@@ -68,7 +100,7 @@ sudo pacman -S --needed --noconfirm \
 sudo pacman -S --needed --noconfirm \
 	jdk-openjdk
 # Rust
-if command -v cargo >/dev/null 2>&1; then
+if command -v cargo > /dev/null 2>&1; then
 	rustup self update && rustup update
 else
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -108,8 +140,8 @@ sudo pacman -S --needed --noconfirm \
 	jupyterlab \
 	python-pdftotext
 
-paru -S --needed --noconfirm \
-	python-bitvector
+# paru -S --needed --noconfirm \
+# 	python-bitvector
 
 # Ruby
 sudo pacman -S --needed --noconfirm \
@@ -141,11 +173,11 @@ sudo pacman -S --needed --noconfirm \
 
 ### Graphical IDEs
 # Vscode
-sudo pacman -S --needed --noconfirm \
-	code
+# sudo pacman -S --needed --noconfirm \
+# 	code
 
 # Vscodium
-paru -S vscodium-bin
+# paru -S vscodium-bin
 
 ## Office Docs
 
@@ -173,8 +205,8 @@ sudo npm install -g purgecss
 
 sudo pacman -S --needed --noconfirm \
 	markdownlint \
-	markdownlint-cli2 \
-	markdown-toc
+	markdownlint-cli2
+# markdown-toc
 
 sudo pacman -S --needed --noconfirm \
 	tree-sitter \
