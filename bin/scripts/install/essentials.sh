@@ -94,13 +94,13 @@ sudo pacman -S --needed --noconfirm \
 
 ## Input
 
-# sudo pacman -S --needed --noconfirm \
-# 	 xf86-input-synaptics \
-# 	 xf86-input-libinput \
-# 	 xf86-input-evdev \
+sudo pacman -S --needed --noconfirm \
+	xf86-input-synaptics \
+	xf86-input-libinput \
+	xf86-input-evdev
 
-# sudo pacman -S \
-# 	libinput
+sudo pacman -S --needed --noconfirm \
+	libinput
 
 # Only if you use a VM
 # sudo pacman -S --needed --noconfirm \
@@ -162,7 +162,7 @@ sudo pacman -S --needed --noconfirm \
 sudo systemctl enable NetworkManager
 
 # Network Manager GUI connection editor and widgets
-sudo pacman -S--needed --noconfirm \
+sudo pacman -S --needed --noconfirm \
 	nm-connection-editor
 
 ## Bluetooth
@@ -278,9 +278,18 @@ sudo pacman -S --needed --noconfirm \
 ## Archiver
 
 sudo pacman -S --needed --noconfirm \
+	tar unarchiver unace \
+	rsync
+
+## Compressor
+
+sudo pacman -S --needed --noconfirm \
+	xz \
 	p7zip unrar zip unzip \
-	tar unarchiver unace xz rsync \
 	gzip pbzip2 bzip3
+
+paru -S --needed --noconfirm \
+	plzip
 
 ## File Systems
 
