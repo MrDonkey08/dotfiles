@@ -335,7 +335,9 @@ sudo ln -s /windows/Windows/Fonts /usr/local/share/fonts/WindowsFonts
 
 ### Emoji Support
 sudo pacman -S --needed --noconfirm \
-	noto-fonts-emoji
+	nerd-fonts \
+	noto-fonts-emoji \
+	woff2-font-awesome
 
 # paru -S --needed --noconfirm \
 # 	ttf-joypixels
