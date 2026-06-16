@@ -161,6 +161,13 @@ sudo pacman -S --needed --noconfirm \
 
 sudo systemctl enable NetworkManager
 
+## DNS
+# https://wiki.archlinux.org/title/NetworkManager#systemd-resolved
+sudo pacman -S --needed --noconfirm \
+	resolvectl
+
+sudo systemctl enable --now systemd-resolved
+
 # Network Manager GUI connection editor and widgets
 sudo pacman -S --needed --noconfirm \
 	nm-connection-editor
