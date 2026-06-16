@@ -8,8 +8,6 @@ sudo pacman -S --needed --noconfirm \
 	git \
 	git-lfs
 
-# paru -S git-open
-
 ## GitHub
 
 ### GitHub Pages
