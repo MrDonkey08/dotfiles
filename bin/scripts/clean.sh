@@ -9,6 +9,19 @@ sudo paccache -r
 # Delete temporary files and logs using the clean option in journalctl:
 sudo journalctl --vacuum-size=100M
 
+# Removes all generated artifacts from all Cargo projects on ~
+if command -v cargo clean-all > /dev/null 2>&1; then
+	cargo clean-all -y ~
+elif command -v cargo > /dev/null 2>&1; then
+	find ~ -type f -name 'Cargo.toml' -exec cargo clean {} \;
+fi
+
+# Removes interactively all log files that are either empty or larger than 2 MB
+# and haven't been modified in at least 30 days
+sudo find /var/log -type f -empty -or -size +2M -mtime +30 -exec rm {} \;
+
+# find ~ -type f -empty
+
 # Clean the tmp directory
 sudo rm -rf /tmp/*
 
