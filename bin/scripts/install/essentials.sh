@@ -321,7 +321,7 @@ paru -S --needed --noconfirm \
 	ttf-font-awesome-4
 
 sudo pacman -S --needed --noconfirm \
-	ttf-material-design-icons \
+	ttf-material-icons \
 	gnu-free-fonts
 
 ## Microsoft_fonts
@@ -335,8 +335,10 @@ sudo ln -s /windows/Windows/Fonts /usr/local/share/fonts/WindowsFonts
 
 ### Emoji Support
 sudo pacman -S --needed --noconfirm \
-	noto-fonts-emoji \
-	ttf-joypixels
+	noto-fonts-emoji
+
+# paru -S --needed --noconfirm \
+# 	ttf-joypixels
 
 ## Git
 # Git LFS for binaries file managment support. Pretty useful
