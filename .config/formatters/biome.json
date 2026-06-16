@@ -1,5 +1,6 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.15/schema.json",
+  "root": false,
+  "$schema": "https://biomejs.dev/schemas/2.5.0/schema.json",
   "linter": {
     "enabled": true,
     "rules": { "recommended": true }
@@ -15,11 +16,7 @@
     "useEditorconfig": true,
     "formatWithErrors": false,
     "attributePosition": "auto",
-    "bracketSpacing": true,
-    "indentStyle": "space",
-    "indentWidth": 4,
-    "lineEnding": "lf",
-    "lineWidth": 80
+    "bracketSpacing": true
   },
   "javascript": {
     "formatter": {
