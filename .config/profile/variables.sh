@@ -10,7 +10,8 @@ export VISUAL='nvim'
 ## Pager
 # export LESS='-R'
 export PAGER='less'
-export MDCAT_PAGER='less -R'
+export MDCAT_PAGER='less -RF'
+export BAT_PAGER='less -RF'
 # export MANPAGER='less -R --use-color -Dd+r -Du+c -Du+ '
 
 ## Performance
