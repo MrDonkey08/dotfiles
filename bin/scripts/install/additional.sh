@@ -14,7 +14,8 @@ paru -S --needed --noconfirm \
 
 # Browsers
 
-yay -S --needed --noconfirm brave-bin
+paru -S --needed --noconfirm brave-bin
+
 sudo pacman -S --needed --noconfirm \
 	firefox \
 	lynx \
@@ -65,7 +66,8 @@ sudo pacman -S --needed --noconfirm \
 # Network
 
 sudo pacman -S --needed --noconfirm \
-	wireshark-cli
+	wireshark-cli \
+	wireshark-qt
 
 # Math
 
@@ -79,7 +81,7 @@ sudo pacman -S --needed --noconfirm \
 sudo pacman -S --needed --noconfirm \
 	perl-image-exiftool
 # https://bbs.archlinux.org/viewtopic.php?id=134680
-#sudo ln /usr/bin/vendor_perl/exiftool /usr/bin/exiftool
+# sudo ln /usr/bin/vendor_perl/exiftool /usr/bin/exiftool
 
 # Messengers
 
@@ -98,20 +100,22 @@ sudo pacman -S --needed --noconfirm \
 
 sudo pacman -S --needed --noconfirm \
 	vlc \
-	vlc-plugin-base \
+	vlc-plugins-base \
 	vlc-plugin-x264 \
 	vlc-plugin-x265 \
 	vlc-plugin-ffmpeg
 
-# thunar gvfs #	 nvidia-settings \
+sudo pacman -S --needed --noconfirm \
+	thunar gvfs \
+	nvidia-settings
 
 ## Media Edition
 
 sudo pacman -S --needed --noconfirm \
 	gimp \
-	tenacity
-# 	blender \
-# 	kdenlive
+	tenacity \
+	blender \
+	kdenlive
 
 # Meetings
 
@@ -131,6 +135,9 @@ paru -S --needed --noconfirm \
 
 sudo pacman -S --needed --noconfirm \
 	veracrypt
+
+paru -S --needed --noconfirm \
+	cryptomator
 
 ## VPN
 
@@ -158,17 +165,22 @@ sudo pacman -S --needed --noconfirm \
 	progress \
 	hdparm
 
-yay -S --needed --noconfirm \
+paru -S --needed --noconfirm \
 	woeusb-ng
 
 sudo pacman -S --needed --noconfirm \
 	bat \
-	lsd \
+	lsd
+
+paru -S --needed --noconfirm \
 	mdcat
 
 sudo pacman -S --needed --noconfirm \
 	locate \
 	fzf
+
+sudo pacman -S --needed --noconfirm \
+	translate-shell
 
 ## Extra
 
