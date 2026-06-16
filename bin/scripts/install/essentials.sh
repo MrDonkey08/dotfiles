@@ -284,7 +284,8 @@ sudo pacman -S --needed --noconfirm \
 ## Compressor
 
 sudo pacman -S --needed --noconfirm \
-	xz \
+	gzip bzip2 xz zstd lrzip lzop compress lz4 lzip \
+	pigz pbzip2 \
 	p7zip unrar zip unzip \
 	gzip pbzip2 bzip3
 
