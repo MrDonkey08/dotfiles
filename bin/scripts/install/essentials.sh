@@ -339,6 +339,10 @@ sudo pacman -S --needed --noconfirm \
 	noto-fonts-emoji \
 	woff2-font-awesome
 
+### Console Fonts
+sudo pacman -S --needed --noconfirm \
+	terminus-font
+
 # paru -S --needed --noconfirm \
 # 	ttf-joypixels
 
