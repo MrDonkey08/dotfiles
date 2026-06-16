@@ -9,6 +9,7 @@ alias mxn_date='date +"%d-%m-%Y"'
 
 # alias to get tempeature of the cpu cores
 alias core-temp='sensors | grep Core'
+alias sensors-json='sensors -j 2> /dev/null | prettier --parser json | bat --language json'
 
 # comands/alias to get public ip
 # alias pub-ip='curl https://ipinfo.io/ip'
