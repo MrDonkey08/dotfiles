@@ -2,8 +2,11 @@
 
 # Clients
 
-sudo pacman -S \
+sudo pacman -S --needed --noconfirm \
 	steam \
+	protontricks
+
+sudo pacman -S --needed --noconfirm \
 	lutris
 
 # Games
