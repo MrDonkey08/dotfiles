@@ -33,6 +33,7 @@ export PAGER='less'
 export MDCAT_PAGER='less -RF'
 export BAT_PAGER='less -RF'
 # export MANPAGER='less -R --use-color -Dd+r -Du+c -Du+ '
+export MANROFFOPT="-c"
 
 ## Performance
 # To enable Vulkan Video support in vulkan-intel. This can improve battery life
