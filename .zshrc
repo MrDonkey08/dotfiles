@@ -40,7 +40,7 @@ _safe_source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-sub
 _safe_source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # To swap `sudo` at the beginning of the command by pressing `<Esc>` twice
-_safe_source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh --required
+_safe_source /usr/local/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh --required
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 _safe_source "$HOME/.p10k.zsh"
