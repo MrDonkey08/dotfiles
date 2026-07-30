@@ -21,7 +21,7 @@ function _safe_source() {
 }
 
 # cachyos-config.zsh
-_safe_source /usr/share/cachyos-zsh-config/cachyos-config.zsh
+# _safe_source /usr/share/cachyos-zsh-config/cachyos-config.zsh
 
 _safe_source "$HOME/.profile"
 _safe_source "$HOME/.fzf.zsh"
